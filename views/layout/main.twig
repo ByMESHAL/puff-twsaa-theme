@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ getFunction('locale') }}" dir="{{ getFunction('locale') == 'ar' ? 'rtl' : 'ltr' }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{% block title %}{% endblock %}</title>
@@ -11,6 +11,11 @@
     {# {% set asset_url = '/twig-theme/assets/' %} #}
     {% set storage_url = 'https://cdn.twsaa.com/' %}
     {% set lang = getFunction('locale') %}
+    {% set puff_json %}{% include 'puff/config.json.twig' %}{% endset %}
+    {% set puff = jsonDecode(puff_json) %}
+    {% set puff_catalog_ready = puff.release.enabled and puff.release.pricesAndAvailabilityVerified and puff.release.catalogOrderVerified and puff.products|length == puff.release.expectedProductCount %}
+    {% for p in puff.products %}{% if not puff.destination.productLinks[p.handle]|default(null) %}{% set puff_catalog_ready = false %}{% endif %}{% endfor %}
+
 
     {% if lang == 'ar' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url ~ 'css/bootstrap-ar.min.css' }}">
@@ -18,8 +23,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset_url ~ 'css/bootstrap-en.min.css' }}">
     {% endif %}
 
-    <link rel="stylesheet" type="text/css" href="https://tawasa4shujat.twsaa.com/themes/uray/assets/js/plugins/owlcarousel/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://tawasa4shujat.twsaa.com/themes/uray/assets/js/plugins/owlcarousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}js/plugins/owlcarousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}js/plugins/owlcarousel/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset_url ~ 'css/search.min.css' }}">
     <link rel="stylesheet" type="text/css" href="{{ asset_url ~ 'css/fonts.css' }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset_url ~ 'css/front-fonts.css' }}" />
@@ -130,6 +135,9 @@
         }
     </style>
 
+    <link rel="stylesheet" href="{{ asset_url ~ 'css/puff.css' }}">
+    <link rel="stylesheet" href="{{ asset_url ~ 'css/puff-commerce.css?v=20261016f' }}">
+    <link rel="stylesheet" href="{{ asset_url ~ 'css/puff-shell.css?v=20261016f' }}">
     {% block head %}{% endblock %}
     <script type="text/javascript" src="{{ asset_url ~'js/core/libraries/jquery.min.js' }}"></script>
     <script>
@@ -144,7 +152,7 @@
         };
     </script>
 </head>
-<body class="{{ lang == 'ar' ? 'rtl' : 'ltr' }}">
+<body class="puff-theme {{ lang == 'ar' ? 'rtl' : 'ltr' }}">
     <div class="app" id="app">
 
         {% set ad = getFunction('getad') %}
@@ -179,7 +187,7 @@
             {% endif %}
         {% endif %}
 
-        <div class="header">
+        <div class="header puff-header">
             {{ include("layout/header.twig") }}
         </div>
         
@@ -204,7 +212,7 @@
     
     
     <script type="text/javascript" src="{{ asset_url ~'js/shop.js' }}"></script>
-    <script type="text/javascript" src="https://tawasa4shujat.twsaa.com/themes/uray/assets/js/plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{{ asset_url }}js/plugins/owlcarousel/owl.carousel.min.js"></script>
     <script type="text/javascript" src="{{ asset_url ~'js/core/libraries/swiper-bundle.min.js' }}"></script>
     <script type="text/javascript" src="{{ asset_url ~'js/core/libraries/bootstrap.min.js' }}"></script>
     <script type="text/javascript" src="{{ asset_url ~'js/core/libraries/toastr.min.js' }}"></script>
@@ -308,6 +316,9 @@
     
     </script>
     {% block footer_scripts %}{% endblock %}
+    <script defer src="{{ asset_url ~ 'js/puff-home.js' }}"></script>
+    <script defer src="{{ asset_url ~ 'js/puff-policies.config.js' }}"></script>
+    <script defer src="{{ asset_url ~ 'js/puff-policies.js' }}"></script>
 
     <div class="modal-overlay"></div>
     <script>
