@@ -1,9 +1,11 @@
-
 {% extends "layout/main.twig" %}
-
-{% block title %} main {% endblock %}
-
+{% block title %}Puff{% endblock %}
 {% block main_content %}
+{% if puff_catalog_ready %}
+  {% include 'puff/home.twig' %}
+{% else %}
+  {# Keep real platform blocks until all 124 links, prices and ordering are verified. #}
+
     <div class="home">
 
         {% for content in homeContent %}
@@ -104,10 +106,12 @@
         {% endfor %}
     </div>
 
+
+{% endif %}
 {% endblock %}
-
-
 {% block footer_scripts %}
+{% if not puff_catalog_ready %}
+
     {# <script>
         $( window ).resize(function() {
             $('.s-slider').slick('resize');
@@ -233,6 +237,6 @@
         });
     });
     </script>
-{% endblock %}
 
-    
+{% endif %}
+{% endblock %}
