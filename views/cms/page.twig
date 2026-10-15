@@ -1,8 +1,14 @@
 {% extends "layout/main.twig" %}
-
-{% block title %} main {% endblock %}
+{% block title %}{{ page.page_title|default('Puff') }}{% endblock %}
 {% block main_content %}
-    <div class="cms-content">
-        {{ page.html_content|raw }}
-    </div>
+{% set puff_path = getFunction('getPath')|trim('/') %}
+<article class="puff-policy-page" dir="rtl"><h1>{{ page.page_title|default('') }}</h1><div class="puff-policy">
+{% if puff_path == 'page/contact-information' %}{% include 'puff/policies/CONTACT_INFORMATION.twig' %}
+{% elseif puff_path == 'page/privacy' %}{% include 'puff/policies/PRIVACY_POLICY.twig' %}
+{% elseif puff_path == 'page/returns' %}{% include 'puff/policies/REFUND_POLICY.twig' %}
+{% elseif puff_path == 'page/shipping' %}{% include 'puff/policies/SHIPPING_POLICY.twig' %}
+{% elseif puff_path == 'page/terms-of-service' %}{% include 'puff/policies/TERMS_OF_SERVICE.twig' %}
+{% elseif puff_path == 'page/contact' %}{% include 'puff/policies/PAGE_CONTACT.twig' %}
+{% else %}{{ page.html_content|raw }}{% endif %}
+</div></article>
 {% endblock %}
