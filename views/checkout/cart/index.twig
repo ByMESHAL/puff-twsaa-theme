@@ -20,8 +20,9 @@
 </style>
 {% endblock %}
 {% block main_content %}
-<section class="cart">
+<section class="cart puff-cart-page">
     {% if cart %}
+        <header class="puff-cart-heading"><h1>Cart <span class="puff-cart-count">{{ cart.items_qty }}</span></h1></header>
         <div class="cart-content">
 
             <form action="{{ route('shop.checkout.cart.update') }}" method="POST" submit.prevent="onSubmit" enctype="multipart/form-data">
@@ -282,6 +283,7 @@
     
             </form>
     
+            <aside class="puff-cart-summary">
             {% set wallet = 0 %}
             {% if authUser and authUser.adminCustomer.wallet %}
                 {% set wallet = authUser.adminCustomer.wallet %}
@@ -403,6 +405,7 @@
                     {% include 'checkout/cart/loyalty/point.twig' %}
                 </div>
             {% endif %}
+            </aside>
 
         </div>
     
