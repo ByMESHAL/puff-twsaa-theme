@@ -5,7 +5,9 @@
 
     {# @inject ('productRepository', 'Webkul\Product\Repositories\ProductRepository') #}
 
-    <div class="main">
+    <div class="main puff-catalog-page">
+
+        <header class="puff-collection-heading"><h1>{{ category.name }}</h1></header>
 
         <div class="category-block" 
         {% if category.display_mode == 'description_only'  %}

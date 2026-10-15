@@ -1,7 +1,8 @@
 {% extends "layout/main.twig" %}
 {% block title %} main {% endblock %}
 {% block main_content %}
-    <div class="main">
+    <div class="main puff-catalog-page">
+        <header class="puff-collection-heading"><h1>جميع المنتجات</h1></header>
         <div class="category-block">
             {% include 'products/list/grid.twig' with {'product': product, sorter: true} %}
 

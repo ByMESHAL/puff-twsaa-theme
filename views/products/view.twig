@@ -1,4 +1,5 @@
 {% extends "layout/main.twig" %}
+{% set puff_is_product_page = true %}
 {% block title %} main {% endblock %}
 {% block head %}
     <link rel="stylesheet" href="https://twsaa.com/themes/mbotiq/assets/css/default-booking.css">
@@ -7,7 +8,7 @@
 {% block main_content %}
 
 
-    <section class="product-detail">
+    <section class="product-detail puff-product-page">
 
         <div class="layouter">
             <form action="{{ route('cart.add', product.product_id) }}" id="product-form" method="POST" enctype="multipart/form-data">
@@ -22,9 +23,11 @@
 
                     <div class="details">
 
+                        {% if product.subtitle|default('')|trim %}
                         <h6 class="badge badge-pill badge-primary">
                             {{ product.subtitle }}
                         </h6>
+                        {% endif %}
                         <div class="product-heading flexbetween flexvcenter flex-wrap">
                             <div>{{ product.name }}</div>
                             {# <div>
@@ -83,9 +86,7 @@
                     {% endif %}
 
 
-                        <div class="full-description mt-30" data-max-height="300">
-                            {{ product.description|raw }}
-                        </div>
+                        
 
                         {% if product.show_weight %}
                             <div class="product-metadata weight">
@@ -135,6 +136,10 @@
                             {% include 'products/view/product-add.twig' %}
 
                         </div>
+
+                        <details class="puff-description"><summary>Description</summary><div class="full-description mt-30" data-max-height="300">
+                            {{ product.description|raw }}
+                        </div></details>
 
                     </div>
                 </div>
