@@ -1,0 +1,65 @@
+/* Exact font-face declarations extracted from https://www.suysaudi.co/; protocol-relative URLs resolved to HTTPS. */
+@font-face {
+  font-family: "Red Hat Text";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_n4.f45549d853e5e3e2907f21be9aecf95e1eaa7516.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_n4.966c83ef0ccfa6512b0ef1e376b376dfb286bd73.woff") format("woff");
+}
+@font-face {
+  font-family: "Red Hat Text";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_n7.01cb725162eb34b374670b9c1bc513ac241650e6.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_n7.b6189975b2592601f17bfdc64fb3d7ee0b51916e.woff") format("woff");
+}
+@font-face {
+  font-family: "Red Hat Text";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_i4.6cfaffd6c72cc494343813ed221ebfae57335fcc.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_i4.f23bcdc86836a2cc4ccc8466c927d1089852c8c8.woff") format("woff");
+}
+@font-face {
+  font-family: "Red Hat Text";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_i7.97ab5b705c1e57acd40bd16c6fd71567cb89284f.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/red_hat_text/redhattext_i7.f3393410cce0aafadc5ec698e5a40558f9a5b199.woff") format("woff");
+}
+@font-face {
+  font-family: Newsreader;
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_n2.5960e0b0697503210b916625dc75038e9a2edf1e.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_n2.cd4250115263c9c39d6eddb8b526847dc36a8619.woff") format("woff");
+}
+@font-face {
+  font-family: Newsreader;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_n7.23ab8134dd970213aaed7699491a8a2cb47dae45.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_n7.d508f4855ca4dedbd83fa582e42d6513c7e89b8a.woff") format("woff");
+}
+@font-face {
+  font-family: Newsreader;
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_i2.6fa7e79ada3d3472b0bbef072304661e3c47c233.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_i2.7e0d274f114d8e9bd0867a8a4b89e37c9e7b0562.woff") format("woff");
+}
+@font-face {
+  font-family: Newsreader;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_i7.c957ba3bc7bb44bfca68314e689a88a6cb340dbe.woff2") format("woff2"),
+       url("https://www.suysaudi.co/cdn/fonts/newsreader/newsreader_i7.600beb959cc55275297418e02b7b341685f85101.woff") format("woff");
+}
