@@ -1,0 +1,8 @@
+<nav class="puff-menu" aria-label="القائمة الرئيسية" dir="rtl">
+  <a href="{{ puff.destination.pageLinks.home }}">الرئيسية</a>
+  <details class="puff-menu-group"><summary>تسوق المنتجات</summary><div class="puff-menu-panel">
+    <a href="{{ puff.destination.pageLinks.catalog }}">جميع المنتجات</a>
+    {% for category in puff.categories %}<a href="{{ puff.destination.categoryLinks[category.handle] }}">{{ category.title }}</a>{% endfor %}
+  </div></details>
+  <a href="{{ puff.destination.pageLinks.contact }}">تواصل معنا</a>
+</nav>

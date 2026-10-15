@@ -1,0 +1,18 @@
+<section class="puff-home" id="puff-home" dir="rtl" lang="ar"><div class="puff-wrap">
+  <nav class="puff-quick-nav" aria-label="تصفح المتجر"><a href="#best-sellers">الأكثر مبيعًا</a><a href="#special-edition">إصدار خاص بف</a><a href="#all-products">جميع المنتجات</a></nav>
+  <section id="best-sellers" class="puff-block" aria-labelledby="puff-best-heading"><header class="puff-heading"><h1 id="puff-best-heading">الأكثر مبيعًا</h1></header><div class="puff-grid puff-best-grid">
+  {% for handle in puff.bestSellerHandles %}{% for p in puff.products %}{% if p.handle == handle %}{% include 'puff/card.twig' with {image_loading:'eager'} %}{% endif %}{% endfor %}{% endfor %}
+  </div></section>
+  {% for p in puff.products %}{% if p.handle == puff.specialHandle %}{% set href = puff.destination.productLinks[p.handle] %}
+  <section id="special-edition" class="puff-special" aria-labelledby="puff-special-heading"><header class="puff-heading"><h2 id="puff-special-heading">إصدار خاص بف</h2></header><div class="puff-special-layout">
+    <a class="puff-special-image" href="{{ href }}"><img src="{{ p.image }}" alt="{{ p.title }}" loading="lazy" width="1000" height="1000"></a>
+    <div class="puff-special-info"><span class="puff-special-tag">سي شل سمر</span><h3>بف سيبي شل<br>ثلاثي الأبعاد</h3><p class="puff-special-sub">اختر السعة المناسبة لك</p><div class="puff-sizes">
+    {% for variant in p.variants %}<a href="{{ puff.destination.variantLinks[variant.id]|default(href, true) }}"{% if not variant.available %} class="puff-unavailable"{% endif %}>{{ variant.title }}<span><bdi>{{ variant.price|number_format(2, '.', '') }}</bdi> ر.س</span></a>{% endfor %}
+    </div><a class="puff-button" href="{{ href }}">اكتشف الإصدار الخاص <span aria-hidden="true">←</span></a></div>
+  </div></section>{% endif %}{% endfor %}
+  <section id="all-products" class="puff-block puff-catalog" aria-labelledby="puff-all-heading"><header class="puff-heading"><h2 id="puff-all-heading">جميع المنتجات</h2><p><span data-puff-count aria-live="polite">{{ puff.products|length }}</span> منتج</p></header>
+    <div class="puff-toolbar"><label class="puff-search"><span>البحث</span><input type="search" placeholder="ابحث عن منتج…" data-puff-search autocomplete="off"></label><label class="puff-filter"><span>التصنيف</span><select data-puff-filter><option value="">جميع التصنيفات</option>{% for category in puff.categories %}<option value="{{ category.handle }}">{{ category.title }}</option>{% endfor %}</select></label></div>
+    <div class="puff-grid puff-all-grid" data-puff-products>{% for p in puff.products %}{% include 'puff/card.twig' %}{% endfor %}</div>
+    <p class="puff-empty" data-puff-empty hidden>لا توجد منتجات مطابقة للبحث.</p>
+  </section>
+</div></section>
