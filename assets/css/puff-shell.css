@@ -1,0 +1,36 @@
+/* Layout normalization for the official Twig shell. Native controls remain intact. */
+.puff-theme{margin:0;padding:0;background:#fff;color:#302f2b}
+.puff-theme #app{width:100%;padding:0;box-sizing:border-box}
+.puff-theme .content-container{margin:0}
+.puff-theme .puff-home,.puff-theme .puff-block{margin:0}
+.puff-theme .header.puff-header{padding:0;margin:0;border:0;box-shadow:none}
+.puff-theme .puff-card h3 a{font-weight:400;font-family:Tahoma,Arial,sans-serif}
+.puff-site-header{background:#fff;box-shadow:none;border:0;font-family:Tahoma,Arial,sans-serif}
+.puff-site-header .header-container{max-width:1440px;margin:auto;padding:18px 44px;display:grid;grid-template-columns:1fr 110px 1fr;align-items:center;position:relative;direction:ltr;min-height:85px}
+.puff-site-header .header-row-one{display:contents}
+.puff-site-header .top-links-1{grid-column:1;grid-row:1;display:flex;flex-direction:row-reverse;justify-content:flex-end;align-items:center;gap:22px;width:auto;padding:0;margin:0;border:0;direction:ltr}
+.puff-site-header .top-links-1>li{margin:0;padding:0;list-style:none}
+.puff-site-header .top-links-1>li:nth-child(1),.puff-site-header .top-links-1>li:nth-child(2),.puff-site-header .top-links-1>li:nth-child(5){display:none}
+.puff-site-header .top-links-icon{border:0;width:auto;height:auto;font-size:20px;color:#302f2b;background:transparent;line-height:1.2}
+.puff-site-header .count-wrapper{font-size:10px;min-width:14px;height:14px;line-height:14px;background:#302f2b;top:-8px;right:-8px}
+.puff-site-header .count-wrapper:empty{display:none}
+.puff-site-header .store-logo{grid-column:2;grid-row:1;width:auto;height:auto;max-width:none;padding:0;margin:0;text-align:center;line-height:1}
+.puff-site-header .store-logo>a{display:block;height:auto;line-height:1}
+.puff-site-header .store-logo img.logo{width:88px!important;height:44px!important;max-height:none;object-fit:contain;margin:auto}
+.puff-site-header .top-links-3{position:absolute;left:86px;top:50%;transform:translateY(-50%);width:auto;padding:0;margin:0}
+.puff-site-header .top-links-1{gap:64px;max-width:110px}
+.puff-site-header .primary-menu{grid-column:3;grid-row:1;display:block;width:auto;border:0;padding:0;margin:0;direction:rtl}
+.puff-site-header .puff-menu{justify-content:flex-start;gap:26px;font-size:12px;flex-wrap:nowrap;margin:0;padding:0}
+.puff-site-header .puff-menu>a{white-space:nowrap;padding:0}
+.puff-site-header .puff-menu-group summary{white-space:nowrap;padding:0}
+.puff-theme .puff-native-payments{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;max-width:100%;padding:20px;box-sizing:border-box}
+.puff-theme .puff-native-payments img{width:54px;height:32px;object-fit:contain;flex:none}
+@media(max-width:749px){
+ .puff-site-header .header-container{padding:18px 20px 14px;grid-template-columns:1fr 90px 1fr;min-height:105px;row-gap:20px}
+ .puff-site-header .top-links-1{gap:18px;max-width:70px}
+ .puff-site-header .top-links-3{position:static;transform:none;grid-column:3;grid-row:1;justify-self:end;float:none}
+ .puff-site-header .store-logo img.logo{width:84px!important;height:42px!important}
+ .puff-site-header .primary-menu{grid-column:1 / -1;grid-row:2}
+ .puff-site-header .puff-menu{justify-content:center;gap:22px;font-size:12px}
+ .puff-site-header .puff-menu-panel{inset-inline-start:50%;transform:translateX(50%);max-width:calc(100vw - 40px)}
+}

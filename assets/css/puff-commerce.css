@@ -1,0 +1,112 @@
+/* Source: active Shopify product.json, collection.json, cart.json and
+   main-cart.liquid. Classes are authored on the official TWSAA Twig markup.
+   Presentation only: native controls, identifiers and handlers are retained. */
+.puff-theme #app .puff-product-page,.puff-theme #app .puff-catalog-page,.puff-theme #app .puff-cart-page{--puff-ink:#302f2b;--puff-line:#f4f1eb;color:var(--puff-ink);background:#fff;font-family:"Red Hat Text",Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.6}
+.puff-theme #app .puff-product-page *,.puff-theme #app .puff-catalog-page *,.puff-theme #app .puff-cart-page *{box-sizing:border-box}
+.puff-theme #app .puff-product-page{margin:0;padding:0}
+.puff-theme #app .puff-product-page .layouter{max-width:none;width:100%;padding:0;margin:0}
+.puff-theme #app .puff-product-page #product-form{margin:0;width:100%}
+.puff-theme #app .puff-product-page .form-container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;direction:rtl;align-items:start;width:100%;margin:0;padding:0}
+.puff-theme #app .puff-product-page .product-image-group{grid-column:1;grid-row:1;min-width:0;width:100%;height:auto;max-height:none;padding:0;margin:0;position:relative}
+.puff-theme #app .puff-product-page .product-image-group>div:not(#loader){display:flex;flex-direction:column;width:100%}
+.puff-theme #app .puff-product-page .product-hero-image{width:100%;height:auto;max-height:none;max-width:none;aspect-ratio:4/5;order:0;float:none;margin:0;overflow:hidden;border-radius:0}
+.puff-theme #app .puff-product-page #pro-img{display:block;width:100%;height:100%;max-height:none;max-width:none;object-fit:cover;border-radius:0}
+.puff-theme #app .puff-product-page .thumb-list{order:1;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;width:100%;height:auto!important;max-height:none;position:static;float:none;padding:12px;list-style:none;margin:0}
+.puff-theme #app .puff-product-page .thumb-list .thumb-frame{width:57px!important;height:71px;flex:0 0 57px;border:1px solid var(--puff-line);padding:0}
+.puff-theme #app .puff-product-page .thumb-list img{width:100%;height:100%;object-fit:cover}
+.puff-theme #app .puff-product-page .details{grid-column:2;grid-row:1;width:100%;max-width:400px;margin:0 auto;padding:50px 0 32px;direction:rtl;min-width:0;float:none}
+.puff-theme #app .puff-product-page .product-heading{display:block;font-family:"Newsreader",serif;font-size:28px;font-weight:200;line-height:1.3;text-align:center;margin:0 0 12px}
+.puff-theme #app .puff-product-page .product-heading>div{width:100%;font:inherit}
+.puff-theme #app .puff-product-page .product-heading img{width:auto;height:32px;object-fit:contain;margin:10px auto 0}
+.puff-theme #app .puff-product-page .product-price{display:block;font-family:"Red Hat Text",Arial,sans-serif;text-align:center;font-size:12px;font-weight:400;line-height:1.6;margin:0 0 12px}
+.puff-theme #app .puff-product-page .product-price :is(span,b,strong){font-size:inherit;font-weight:400}
+.puff-theme #app .puff-product-page .stock-status{text-align:center;font-size:12px!important;margin:0 0 20px!important;background:transparent;color:#78746c!important;padding:0;border-radius:0}
+.puff-theme #app .puff-product-page .product-metadata{display:none}
+.puff-theme #app .puff-product-page .product-options{border-top:1px solid var(--puff-line);margin-top:50px;padding:36px 0 24px}
+.puff-theme #app .puff-product-page .attribute>label{display:block;font-size:14px;font-weight:400;margin:0 0 8px}
+.puff-theme #app .puff-product-page .swatch-container{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start}
+.puff-theme #app .puff-product-page .swatch{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 12px;border:1px solid var(--puff-line);border-radius:6px;background:#fff;font:14px/1.6 "Newsreader",serif;cursor:pointer;margin:0;position:relative}
+.puff-theme #app .puff-product-page .swatch:has(input:checked){background:var(--puff-ink);color:#fff;border-color:var(--puff-ink)}
+.puff-theme #app .puff-product-page .swatch:has(input:focus-visible){outline:2px solid var(--puff-ink);outline-offset:3px}
+.puff-theme #app .puff-product-page .swatch:has(input:disabled){opacity:.45;cursor:not-allowed}
+.puff-theme #app .puff-product-page .control:not([type=radio]):not([type=checkbox]){border:1px solid var(--puff-line);border-radius:6px;min-height:44px;background:#fff;color:var(--puff-ink);font:inherit}
+.puff-theme #app .puff-product-page .add-to-buttons{display:flex;flex-wrap:wrap;gap:12px;width:100%}
+.puff-theme #app .puff-product-page .add-to-buttons .btn{min-height:48px;border-radius:0;background:var(--puff-ink);border-color:var(--puff-ink);color:#fff;font:14px/1.5 "Red Hat Text",Arial,sans-serif;flex:1;padding:12px 20px}
+.puff-theme #app .puff-product-page .quantity{display:flex;align-items:center;justify-content:center;gap:0;border-radius:0}
+.puff-theme #app .puff-product-page .quantity .control{width:52px;text-align:center;border-radius:0!important}
+.puff-theme #app .puff-product-page .quantity :is(.decrease,.increase){width:40px;min-height:44px;background:#fff;border:1px solid var(--puff-line);color:var(--puff-ink)}
+.puff-theme #app .puff-description{width:100%;border-top:1px solid var(--puff-line);border-bottom:1px solid var(--puff-line);margin-top:24px}
+.puff-theme #app .puff-description>summary{cursor:pointer;padding:18px 0;font:12px/1.6 "Red Hat Text",Arial,sans-serif;list-style-position:inside}
+.puff-theme #app .puff-description .full-description{font:18px/1.6 "Newsreader",serif;margin:0!important;padding:12px 0 24px;max-height:none!important;overflow:visible}
+.puff-theme #app .puff-description .full-description p{margin:0 0 1em}
+.puff-theme #app .puff-product-page :is(.product-group,.related-products,.up-sells){max-width:1440px;margin:48px auto;padding-inline:40px}
+
+/* Collection: portrait media, 16px gaps and two columns on mobile. */
+.puff-theme #app .puff-catalog-page{max-width:1440px;margin:0 auto;padding:0 40px 66px;width:100%}
+.puff-theme #app .puff-catalog-page .category-block{width:100%;max-width:none;padding:0;margin:0}
+.puff-theme #app .puff-catalog-page .product-group{margin:0 0 24px}
+.puff-theme #app .puff-catalog-page #load_data{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:0;float:none;width:100%;align-items:start}
+.puff-theme #app .puff-catalog-page .product-box{width:100%;max-width:none;min-width:0;margin:0;padding:0;float:none}
+.puff-theme #app .puff-catalog-page .product-card{border:0;border-radius:0;box-shadow:none;background:transparent;padding:0;height:auto}
+.puff-theme #app .puff-catalog-page .product-image{aspect-ratio:4/5;overflow:hidden;background:#f8f7f4;position:relative;border-radius:0}
+.puff-theme #app .puff-catalog-page .product-image img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.puff-theme #app .puff-catalog-page .product-information{padding:8px 0 0}
+.puff-theme #app .puff-catalog-page .product-name{font:12px/1.6 "Red Hat Text",Arial,sans-serif;margin:0;text-align:start;white-space:normal}
+.puff-theme #app .puff-catalog-page .product-bottom-row{padding:2px 0 0;margin:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font:12px/1.6 "Red Hat Text",Arial,sans-serif}
+.puff-theme #app .puff-catalog-page .product-bottom-row .price{font:inherit}
+.puff-theme #app .puff-catalog-page .cart-wish-wrap{display:flex;gap:8px;align-items:center}
+.puff-theme #app .puff-catalog-page .cart-wish-wrap .btn{background:transparent;color:var(--puff-ink);border:0;padding:6px}
+.puff-theme #app .puff-catalog-page .top-toolbar .btn{background:#fff;color:var(--puff-ink);border:1px solid var(--puff-line);font:inherit;padding:10px 14px}
+
+/* Cart: source 25rem summary, 3rem gap, square thumbnails and dividers. */
+.puff-theme #app .puff-cart-page{max-width:1440px;margin:0 auto;padding:32px 40px 0}
+.puff-theme #app .puff-cart-page .cart-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,400px);gap:48px;width:100%;margin:0;align-items:start}
+.puff-theme #app .puff-cart-page .cart-content>form{min-width:0;margin:0}
+.puff-theme #app .puff-cart-page .puff-cart-summary{border:1px solid var(--puff-line);border-radius:0;padding:24px;min-width:0;align-self:stretch}
+.puff-theme #app .puff-cart-page .cart-item-list{width:100%;border:0;padding:0}
+.puff-theme #app .puff-cart-page .cart-item-list .item{display:flex;gap:24px;padding:24px 0;border:0;border-bottom:1px solid var(--puff-line);margin:0;background:#fff}
+.puff-theme #app .puff-cart-page .item-image{flex:0 0 120px;width:120px;height:120px;overflow:hidden}
+.puff-theme #app .puff-cart-page .item-image img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.puff-theme #app .puff-cart-page .item-details{min-width:0;flex:1;padding:0}
+.puff-theme #app .puff-cart-page .item-title{font:14px/1.6 "Red Hat Text",Arial,sans-serif;margin:0 0 8px}
+.puff-theme #app .puff-cart-page .item-options,.puff-theme #app .puff-cart-page .price{font-size:12px}
+.puff-theme #app .puff-cart-page .quantity :is(button,input){border-radius:0;background:#fff;color:var(--puff-ink);border:1px solid var(--puff-line);min-height:40px}
+.puff-theme #app .puff-cart-page .order-summary{width:100%;padding:0;border:0;box-shadow:none;background:transparent}
+.puff-theme #app .puff-cart-page .order-summary h3{font:200 24px/1.3 "Newsreader",serif;margin:0 0 24px}
+.puff-theme #app .puff-cart-page .order-summary .item-detail{padding:10px 0;font-size:14px}
+.puff-theme #app .puff-cart-page .order-summary .payable-amount{border-top:1px solid var(--puff-line);padding:20px 0;font-size:16px}
+.puff-theme #app .puff-cart-page .btn-primary,.puff-theme #app .puff-cart-page .btn-black{background:var(--puff-ink);border-color:var(--puff-ink);color:#fff;border-radius:0;min-height:44px;font:14px/1.5 "Red Hat Text",Arial,sans-serif}
+.puff-theme #app .puff-cart-page .puff-cart-summary>.btn{display:block;width:100%;margin-top:20px}
+.puff-theme #app .puff-cart-page .coupon-container{margin-bottom:24px}
+.puff-theme #app .puff-cart-page .coupon-form{display:flex;gap:8px;align-items:flex-start}
+.puff-theme #app .puff-cart-page .coupon-form .control-group{min-width:0;flex:1}
+.puff-theme #app .puff-cart-page .coupon-form .control{width:100%;min-height:44px;border:1px solid var(--puff-line);border-radius:0}
+.puff-theme #app .puff-cart-page .cart-content:not(:has(.puff-cart-summary)){display:block;text-align:center;min-height:260px;padding:48px 0}
+
+@media(max-width:999px) and (min-width:750px){.puff-theme #app .puff-product-page .details{max-width:none;padding:36px 24px}.puff-theme #app .puff-catalog-page{padding-inline:24px}.puff-theme #app .puff-cart-page{padding-inline:24px}.puff-theme #app .puff-cart-page .cart-content{gap:24px;grid-template-columns:minmax(0,1fr) 320px}}
+@media(max-width:749px){
+ .puff-theme #app .puff-product-page .form-container{grid-template-columns:minmax(0,1fr)}
+ .puff-theme #app .puff-product-page .product-image-group{grid-column:1;grid-row:1}
+ .puff-theme #app .puff-product-page .details{grid-column:1;grid-row:2;max-width:none;padding:28px 20px 32px}
+ .puff-theme #app .puff-product-page .product-heading{font-size:26px}
+ .puff-theme #app .puff-product-page .product-options{margin-top:28px;padding-top:24px}
+ .puff-theme #app .puff-product-page .swatch-container{gap:8px}
+ .puff-theme #app .puff-product-page .swatch{font-size:13px;min-height:42px;padding:9px 11px}
+ .puff-theme #app .puff-catalog-page{padding:0 16px 40px}
+ .puff-theme #app .puff-catalog-page #load_data{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .puff-theme #app .puff-cart-page{padding:24px 16px 0}
+ .puff-theme #app .puff-cart-page .cart-content{grid-template-columns:minmax(0,1fr);gap:24px}
+ .puff-theme #app .puff-cart-page .cart-item-list .item{gap:16px}
+ .puff-theme #app .puff-cart-page .item-image{flex-basis:88px;width:88px;height:88px}
+ .puff-theme #app .puff-cart-page .puff-cart-summary{padding:20px}
+}
+
+/* Source collection title/divider and cart title, from collection.json/cart.json. */
+.puff-theme #app .puff-collection-heading{padding:36px 0 11px;margin:0 0 8px;border-bottom:1px solid var(--puff-line);text-align:left}
+.puff-theme #app .puff-collection-heading h1{font:200 36px/1.3 "Newsreader",serif;color:var(--puff-ink);margin:0 0 84px;letter-spacing:0}
+.puff-theme #app .puff-cart-heading{margin:0 0 24px;text-align:left}
+.puff-theme #app .puff-cart-heading h1{display:inline-flex;align-items:center;gap:8px;margin:0;font:200 24px/1.3 "Newsreader",serif;color:var(--puff-ink);direction:ltr}
+.puff-theme #app .puff-cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:50%;padding:0 6px;background:rgba(48,47,43,.1);font:400 12px/1 "Red Hat Text",Arial,sans-serif}
+.puff-theme #app .puff-product-page .product-price :is(.special-price,.regular-price){color:var(--puff-ink)}
+.puff-theme #app .puff-product-page .add-to-buttons .btn{border-radius:6px}
+.puff-theme #app .puff-catalog-page .product-a{border-radius:0}

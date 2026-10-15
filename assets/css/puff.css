@@ -1,0 +1,103 @@
+/* Source: active Shopify theme; scoped TWSAA presentation styles. */
+
+.puff-home{background:#fff;color:#302f2b;font-family:Tahoma,Arial,sans-serif;line-height:1.7;scroll-behavior:smooth}.puff-home *{box-sizing:border-box}.puff-wrap{max-width:1440px;padding:0 44px 80px;margin:auto}.puff-home a{text-decoration:none;color:inherit}.puff-quick-nav{display:flex;justify-content:center;gap:36px;border-bottom:1px solid #eae8e2;padding:22px 0;font-size:13px}.puff-quick-nav a:hover{color:#877154}.puff-block{padding:58px 0 64px;scroll-margin-top:100px}.puff-heading{text-align:center;margin-bottom:34px}.puff-heading h1,.puff-heading h2{font:normal 36px/1.4 Tahoma,Arial,sans-serif;margin:8px 0 0;letter-spacing:0}.puff-eyebrow{color:#8a7862;font-size:12px;letter-spacing:0}.puff-heading p{font-size:13px;color:#77736b;margin:10px 0 0}.puff-grid{display:grid;gap:34px 24px}.puff-best-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.puff-all-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.puff-card{min-width:0}.puff-card-image{display:block;aspect-ratio:1;background:#f8f7f4;border-radius:10px;overflow:hidden;position:relative}.puff-card-image img{height:100%;width:100%;object-fit:contain;transition:transform .3s ease}.puff-card-image:hover img{transform:scale(1.035)}.puff-card-info{padding:15px 2px 0}.puff-card h3{font:normal 14px/1.8 Tahoma,Arial,sans-serif;margin:0 0 7px;letter-spacing:0;min-height:25px}.puff-price{font:normal 15px/1.5 Tahoma,Arial,sans-serif;margin:0 0 10px}.puff-price>span{font-size:12px}.puff-price s{font-size:12px;color:#8a877f;margin-right:7px}.puff-card-action{display:flex;justify-content:space-between;align-items:center;font-size:12px;border-top:1px solid #eceae5;padding:10px 0 0;color:#68645b!important}.puff-card-action:hover{color:#000!important}.puff-badge{position:absolute;top:12px;right:12px;background:#fff;padding:3px 10px;font-size:11px;border-radius:20px}.puff-special{background:#f4f1eb;border-radius:14px;padding:44px;margin:12px 0 0;scroll-margin-top:100px}.puff-special-layout{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:56px;direction:ltr}.puff-special-image{display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#fff}.puff-special-image img{width:100%;height:100%;object-fit:contain}.puff-special-info{direction:rtl;text-align:right}.puff-special-tag{display:inline-block;border:1px solid #cfc4b4;border-radius:20px;font-size:12px;padding:4px 16px;color:#78664f}.puff-special-info h3{font:normal 38px/1.6 Tahoma,Arial,sans-serif;margin:18px 0 8px;letter-spacing:0}.puff-special-sub{font-size:14px;color:#757066}.puff-sizes{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}.puff-sizes a{min-width:90px;flex:1;border:1px solid #d8d0c4;border-radius:7px;text-align:center;padding:10px 7px;font-size:13px;background:#fbfaf7}.puff-sizes a:hover{border-color:#554b3c}.puff-sizes span{display:block;font-size:12px;color:#807566}.puff-unavailable{opacity:.5}.puff-button{display:flex;justify-content:space-between;align-items:center;gap:30px;background:#33362e;color:white!important;padding:16px 23px;border-radius:7px;font-size:14px;max-width:340px}.puff-button:hover{background:#4b5042}.puff-toolbar{display:flex;gap:16px;margin-bottom:30px}.puff-toolbar label{display:flex;align-items:center;gap:12px;font-size:13px}.puff-search{flex:1}.puff-toolbar input,.puff-toolbar select{font:inherit;background:#fff;border:1px solid #dcd9d2;border-radius:7px;padding:13px 16px;min-height:48px;color:#38372f}.puff-toolbar input{width:100%}.puff-toolbar select{min-width:210px}.puff-empty{text-align:center;padding:40px;color:#777}.puff-card[hidden],.puff-empty[hidden]{display:none!important}.puff-home a:focus-visible,.puff-home input:focus-visible,.puff-home select:focus-visible{outline:2px solid #7c705a;outline-offset:4px}
+@media(min-width:1000px){.puff-best-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.puff-best-grid .puff-card h3{min-height:50px}}@media(max-width:749px){.puff-wrap{padding:0 16px 40px}.puff-quick-nav{gap:22px;font-size:11px;padding:18px 0}.puff-block{padding:34px 0 38px}.puff-heading{margin-bottom:24px}.puff-heading h1,.puff-heading h2{font-size:26px}.puff-grid,.puff-best-grid,.puff-all-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}.puff-card h3{font-size:12px;line-height:1.7;min-height:40px}.puff-card-info{padding-top:10px}.puff-card-action{font-size:11px}.puff-price{font-size:14px}.puff-special{padding:26px 16px;border-radius:10px;margin:0 -2px}.puff-special-layout{grid-template-columns:1fr;gap:24px}.puff-special-info{text-align:center}.puff-special-info h3{font-size:28px;margin-top:14px}.puff-special-info h3 br{display:none}.puff-special-info .puff-button{margin:auto;max-width:none}.puff-special-sub{font-size:13px}.puff-toolbar{flex-direction:column;gap:12px}.puff-toolbar label>span{width:48px;flex-shrink:0}.puff-toolbar select{width:100%;min-width:0}.puff-eyebrow{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.puff-card-image img{transition:none}}
+
+.puff-special,.puff-special h2,.puff-special h3{font-family:system-ui,sans-serif;letter-spacing:0}
+.puff-special h2{font-size:clamp(26px,3vw,34px);font-weight:700;line-height:1.5}
+.puff-special h3{font-size:clamp(26px,3vw,36px);font-weight:600;line-height:1.6}
+.puff-special .puff-special-sub{font-size:15px}
+.puff-special .puff-button{font-size:15px;font-weight:600}
+
+.puff-registration{display:flex;align-items:center;justify-content:center;gap:64px;padding:24px 20px 30px;color:var(--color-foreground);font-family:var(--font-body--family);background:transparent}
+.puff-registration-item{display:flex;align-items:center;gap:15px}
+.puff-reg-label{display:block;font:inherit;font-size:11px;line-height:1.6;opacity:.68;margin-bottom:4px}
+.puff-reg-number{display:block;direction:ltr;white-space:nowrap;font-family:inherit;font-size:14px;line-height:1.6;font-variant-numeric:tabular-nums;letter-spacing:.25px}
+.puff-reg-logo{display:block;flex:none;background-image:url("https://cdn.shopify.com/s/files/1/0810/1255/5876/files/saudi-vat-commercial-original.png?v=1791854977");background-repeat:no-repeat}
+.puff-vat-original{width:41px;height:53px;background-size:428.4px 80.92px;background-position:-164.22px -18.36px;border-radius:2px}
+.puff-saudi-original{width:53px;height:53px;background-size:390.6px 73.78px;background-position:-289.23px -14.88px;clip-path:polygon(0 0,40% 4%,75% 4%,100% 0,97% 35%,98% 65%,100% 100%,65% 97%,30% 96%,0 100%,3% 64%,3% 32%)}
+@media(max-width:599px){.puff-registration{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:22px 14px 28px}.puff-registration-item{flex-direction:column;gap:9px;text-align:center;min-width:0}.puff-reg-number{font-size:12px;letter-spacing:0}.puff-reg-label{font-size:10px;margin-bottom:2px}}
+
+
+/* Integration styles only activate on classes added by the verified JS adapter. */
+.puff-home-host{max-width:none!important;width:100%!important;padding:0!important}
+.puff-replaced{display:none!important}
+.puff-home input,.puff-home select{appearance:auto}
+.puff-home .puff-card[hidden]{display:none!important}
+.puff-header{background:#fff;color:#302f2b;box-shadow:none;font-family:Tahoma,Arial,sans-serif}
+.puff-header .navbar-brand img{height:58px!important;width:auto!important;max-height:none!important;object-fit:contain}
+.puff-menu{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:24px;font:14px/1.7 Tahoma,Arial,sans-serif;color:#302f2b;background:#fff}
+.puff-menu a{color:inherit;text-decoration:none}
+.puff-menu-group{position:relative}
+.puff-menu-group summary{cursor:pointer;padding:12px 0}
+.puff-menu-panel{position:absolute;z-index:50;min-width:210px;inset-inline-start:0;background:#fff;border:1px solid #eae8e2;padding:12px 18px;box-shadow:0 10px 24px #302f2b14}
+.puff-menu-panel a{display:block;padding:7px 0;white-space:nowrap}
+.puff-footer{background:#fff;color:#302f2b;font:14px/1.8 Tahoma,Arial,sans-serif;text-align:center;width:100%}
+.puff-footer a{color:inherit;text-decoration:none}
+.puff-footer-logo{padding:72px 32px 48px;max-width:1440px;margin:auto}
+.puff-footer-logo img{display:block;width:100%;height:auto;max-width:100%;margin:auto;object-fit:contain}
+.puff-footer-contact{padding:32px 20px}
+.puff-footer-contact p{margin:0 0 12px}
+.puff-footer-contact a{display:inline-block;direction:ltr}
+.puff-footer-policies{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin:auto;max-width:1352px;padding:12px 20px 16px;border-top:1px solid #f4f1eb;font-size:12px}
+.puff-footer .puff-registration{font-family:Tahoma,Arial,sans-serif;color:#302f2b}
+.puff-menu a:focus-visible,.puff-menu summary:focus-visible,.puff-footer a:focus-visible{outline:2px solid #7c705a;outline-offset:4px}
+@media(max-width:749px){.puff-header .navbar-brand img{height:71px!important}.puff-menu{gap:18px;font-size:12px}.puff-footer-logo{padding:48px 20px 32px}.puff-footer-policies{gap:10px 18px}}
+
+/* Native menu account item remains intact; injected menu uses valid list markup. */
+.puff-menu-item{list-style:none;flex:1 1 auto;min-width:0}
+
+/* Scoped source typography: active Shopify theme base.css, settings_data.json,
+   settings_schema.json and theme-styles-variables.liquid.
+   Font family names are preserved; Shopify-hosted font binaries are not embedded. */
+.puff-policy {
+  color: #302f2b;
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.puff-policy :is(p,h1,h2,h3,h4,h5,h6) { overflow-wrap: break-word; }
+.puff-policy h2 {
+  font-family: "Newsreader", serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.puff-policy :is(h1,h2,h3,h4,h5,h6) {
+  margin-block: clamp(1.5rem, 1em * 3.3, 2.5rem) 0.25em;
+}
+.puff-policy :is(ul,ol) {
+  margin-block-start: 0;
+  padding-inline-start: 1.5em;
+}
+.puff-policy :is(ul,ol):not(:is(ul,ol) :is(ul,ol)) { margin-block-end: 1em; }
+.puff-policy p:empty { display: none; }
+.puff-policy :first-child:is(p,h1,h2,h3,h4,h5,h6),
+.puff-policy :first-child:empty + :is(p,h1,h2,h3,h4,h5,h6) { margin-block-start: 0; }
+.puff-policy :last-child:is(p,h1,h2,h3,h4,h5,h6),
+.puff-policy :is(p,h1,h2,h3,h4,h5,h6):nth-child(2):has(+ :last-child:empty) { margin-block-end: 0; }
+.puff-policy a {
+  color: currentColor;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.125em;
+}
+.puff-policy :is(p,ul,ol,table) a:hover { color: rgb(48 47 43 / 0.7); }
+
+/* Official Twig template integration; these selectors are from its source. */
+.puff-header .header-container{max-width:1440px;margin:auto;background:white;color:#302f2b}
+.puff-header .header-row-one{padding:20px 44px;align-items:center}
+.puff-header .store-logo img{height:58px;width:auto;max-height:none;object-fit:contain}
+.puff-header .primary-menu{background:#fff;border-top:0;border-bottom:1px solid #eae8e2}
+.puff-header .top-links-icon{color:#302f2b}
+.puff-native-payments{display:flex;justify-content:center;align-items:center;gap:12px;padding:12px 20px 24px}
+.puff-native-payments img{height:24px;width:auto;max-width:70px;object-fit:contain}
+.puff-policy-page{max-width:900px;margin:40px auto;padding:0 24px}
+@media(max-width:749px){.puff-header .header-row-one{padding:16px}.puff-header .store-logo img{height:71px}.puff-menu{gap:18px;padding:0 12px}.puff-policy-page{margin:24px auto;padding:0 16px}}
