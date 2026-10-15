@@ -1,0 +1,7 @@
+{% set href = puff.destination.productLinks[p.handle] %}
+<article class="puff-card" data-title="{{ p.title }}" data-categories="|{{ p.categories|join('|') }}|">
+  <a class="puff-card-image" href="{{ href }}"><img src="{{ p.image }}" alt="{{ p.imageAlt|default(p.title) }}" loading="{{ image_loading|default('lazy') }}" decoding="async" width="600" height="600">{% if not p.available %}<span class="puff-badge">نفدت الكمية</span>{% endif %}</a>
+  <div class="puff-card-info"><h3><a href="{{ href }}">{{ p.title }}</a></h3><p class="puff-price">{% if p.priceVaries %}<span>من </span>{% endif %}<bdi>{{ p.price|number_format(2, '.', '') }}</bdi> <span>ر.س</span>{% if p.compareAtPrice > p.price %}<s>{{ p.compareAtPrice|number_format(2, '.', '') }}</s>{% endif %}</p>
+    <a class="puff-card-action" href="{{ href }}">{{ p.hasOptions ? 'اختر الخيارات' : 'عرض المنتج' }}<span aria-hidden="true">←</span></a>
+  </div>
+</article>
